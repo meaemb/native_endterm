@@ -1,1 +1,43 @@
+# === Android / Gradle ===
+*.apk
+*.aab
+*.aar
+*.ap_
+*.dex
+*.class
+
 /build
+/app/build
+
+.gradle
+/local.properties
+
+# === Android Studio ===
+.idea/
+*.iml
+.cxx/
+.externalNativeBuild/
+
+# === Logs ===
+*.log
+
+# === Keystore (IMPORTANT) ===
+*.jks
+*.keystore
+
+# === Firebase (IMPORTANT) ===
+google-services.json
+
+# === OS ===
+.DS_Store
+Thumbs.db
+
+# === Kotlin ===
+*.kotlin_metadata
+*.kotlin_builtins
+
+# === Test reports ===
+/app/build/reports/
+
+# === Profilers / Temp ===
+captures/

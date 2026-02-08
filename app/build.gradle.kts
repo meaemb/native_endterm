@@ -14,8 +14,9 @@ android {
         applicationId = "com.example.campuscompanion"
         minSdk = 24
         targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
+
+        versionCode = 2
+        versionName = "1.1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
@@ -30,22 +31,20 @@ android {
         compose = true
         buildConfig = true
     }
-    defaultConfig {
-        buildConfigField("String", "TICKETMASTER_API_KEY", "\"${project.properties["TICKETMASTER_API_KEY"]}\"")
-    }
 
     composeOptions {
         kotlinCompilerExtensionVersion = "1.5.14"
     }
 
-    kotlinOptions { jvmTarget = "17" }
+    kotlinOptions {
+        jvmTarget = "17"
+    }
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
 }
-
 
 dependencies {
     // Compose BOM
@@ -94,11 +93,7 @@ dependencies {
     implementation("com.google.firebase:firebase-auth-ktx")
     implementation("com.google.firebase:firebase-database-ktx")
 
-    // Tests
+    // Unit tests
     testImplementation("junit:junit:4.13.2")
     testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.3")
-
-    // --- Coroutines test  ---
-    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.3")
-    testImplementation("junit:junit:4.13.2")
 }
